@@ -22,7 +22,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-MODEL = tf.keras.models.load_model("../saved_models/1")
+
+print(tf.reduce_sum(tf.random.normal([1000, 1000])))
+
+
+# MODEL = tf.keras.Sequential([
+#     tf.keras.layers.InputLayer(shape=(256,256,3)),  
+#     tf.keras.layers.TFSMLayer('potato-disease-classification\saved_models\1')
+# ])
+
 
 CLASS_NAMES = ["Early Blight", "Late Blight", "Healthy"]
 
